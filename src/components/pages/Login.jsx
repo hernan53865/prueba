@@ -10,7 +10,7 @@ const Login = () => {
 
 <GoogleLogin
   onSuccess={credentialResponse => {
-    console.log(jwtDecode(credentialResponse.credential));
+    console.log(jwtDecode(credentialResponse.credential).email);
   }}
   onError={() => {
     console.log('Login Failed');
